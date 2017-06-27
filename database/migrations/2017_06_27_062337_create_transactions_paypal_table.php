@@ -20,7 +20,7 @@ class CreateTransactionsPaypalTable extends Migration
             $table->softDeletes();
             $table->string('user_id', 36)->index('fk_user1_idx');
             $table->string('payment_id');
-            $table->string('hash');
+            $table->integer('amount');
             $table->enum('status', array('pending', 'failed', 'received'));
         });
     }
